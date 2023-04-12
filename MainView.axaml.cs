@@ -9,7 +9,6 @@ using System.Device.Pwm;
 using System.Device.Pwm.Drivers;
 using System.Collections.ObjectModel;
 using Avalonia;
-using MessageBox.Avalonia;
 using System.Xml;
 using System.Collections.Generic;
 using System.Xml.Linq;
@@ -120,11 +119,9 @@ namespace LeanovationHitachi
 
         private bool VerifyData(double value)
         {
-            var messageBoxStandardWindow = MessageBox.Avalonia.MessageBoxManager
-      .GetMessageBoxStandardWindow("Error", "La cantidad no está en el rango establecido, debe  ser entre 5-45 RPM.");
+           
             if (value < 5 || value > 45)
             {
-                messageBoxStandardWindow.Show();
                 return false;
             }
 

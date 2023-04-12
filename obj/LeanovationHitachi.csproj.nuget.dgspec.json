@@ -73,10 +73,6 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
-            "MessageBox.Avalonia": {
-              "target": "Package",
-              "version": "[2.1.0, )"
-            },
             "Projektanker.Icons.Avalonia.FontAwesome": {
               "target": "Package",
               "version": "[5.12.0, )"
