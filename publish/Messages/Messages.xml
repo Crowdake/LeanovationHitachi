@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<messages>
+	<message id="1">
+		<name>Model 1</name>
+		<content>Don 1</content>
+		<speed>10</speed>
+	</message>
+	<message id="2">
+		<name>Model 2</name>
+		<content>Don 2</content>
+		<speed>10</speed>
+	</message>
+	<message id="3">
+		<name>Model 3</name>
+		<content>Don 3</content>
+		<speed>10</speed>
+	</message>
+	<message id="4">
+		<name>Model 4</name>
+		<content>Don 4</content>
+		<speed>10</speed>
+	</message>
+	<message id="5">
+		<name>Model 5</name>
+		<content>Don 5</content>
+		<speed>10</speed>
+	</message>
+	<message id="6">
+		<name>Model 6</name>
+		<content>Don 6</content>
+		<speed>10</speed>
+	</message>
+	<message id="7">
+		<name>Model 7</name>
+		<content>Don 7</content>
+		<speed>10</speed>
+	</message>
+</messages>

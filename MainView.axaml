@@ -1,0 +1,233 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:fa="clr-namespace:Projektanker.Icons.Avalonia;assembly=Projektanker.Icons.Avalonia"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="LeanovationHitachi.MainView"
+			 Width="800"
+			 Height="480">
+	<Border>
+
+		<Border>
+
+
+
+
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="250"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+
+				<Border
+                    Grid.Column="0"
+						Background="{DynamicResource secondaryBackColor1}">
+
+
+					<StackPanel>
+
+						<!--Logo-->
+
+						<Image Source="Images/donaldson.png"  Margin="0,15,0,5" Height="35"/>
+
+
+
+						<!--Message Buttons-->
+
+
+
+
+
+
+						<TextBox x:Name="txtMessageOut" Focusable="False" Margin="0,10"
+                            Width="200" Height="40" TextAlignment="Center" FontSize="24"/>
+
+
+
+
+						<Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="*"/>
+							</Grid.ColumnDefinitions>
+							<Button Classes="keyPad" Grid.Column="0" Grid.Row="0" Click="addKeyPadOne">
+								<TextBlock x:Name="btn1" Text="1" Foreground="{DynamicResource titleColor1}"/>
+							</Button>
+							<Button Classes="keyPad" Grid.Column="1" Click="addKeyPadTwo" Grid.Row="0">
+								<TextBlock x:Name="btn2" Text="2" Foreground="{DynamicResource titleColor1}"/>
+							</Button>
+							<Button Classes="keyPad" Grid.Column="2" Click="addKeyPadThree" Grid.Row="0">
+								<TextBlock x:Name="btn3" Text="3" Foreground="{DynamicResource titleColor1}"/>
+							</Button>
+							<Button Classes="keyPad" Grid.Column="0" Click="addKeyPadFour" Grid.Row="1">
+								<TextBlock x:Name="btn4" Text="4" Foreground="{DynamicResource titleColor1}"/>
+							</Button>
+							<Button Classes="keyPad" Grid.Column="1" Click="addKeyPadFive" Grid.Row="1">
+								<TextBlock x:Name="btn5" Text="5" Foreground="{DynamicResource titleColor1}"/>
+							</Button>
+							<Button Classes="keyPad" Grid.Column="2" Click="addKeyPadSix" Grid.Row="1">
+								<TextBlock x:Name="btn6" Text="6" Foreground="{DynamicResource titleColor1}"/>
+							</Button>
+							<Button Classes="keyPad" Grid.Column="0" Click="addKeyPadSeven" Grid.Row="2">
+								<TextBlock x:Name="btn7" Text="7" Foreground="{DynamicResource titleColor1}"/>
+							</Button>
+							<Button Classes="keyPad" Grid.Column="1" Click="addKeyPadEight" Grid.Row="2">
+								<TextBlock x:Name="btn8" Text="8" Foreground="{DynamicResource titleColor1}"/>
+							</Button>
+							<Button Classes="keyPad" Grid.Column="2" Click="addKeyPadNine" Grid.Row="2">
+								<TextBlock x:Name="btn9" Text="9" Foreground="{DynamicResource titleColor1}"/>
+							</Button>
+							<Button Classes="keyPad" Grid.Column="1" Click="addKeyPadZero" Grid.Row="3">
+								<TextBlock x:Name="btn0" Text="0" Foreground="{DynamicResource titleColor1}"/>
+							</Button>
+
+							<Button Classes="keyPad" Grid.Column="2" Click="addKeyPadErase"  Grid.Row="3">
+								<fa:Icon x:Name="btnErase" Value="fa-solid fa-delete-left" Foreground="{DynamicResource titleColor1}"/>
+							</Button>
+
+						</Grid>
+						<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+							<Button x:Name="btnMessage"
+						   Click="btnMessage_Click"
+						  Classes="menuButton"
+								
+									Width="105"
+									Height="60"
+									Margin="12,10,8,10">
+								<TextBlock FontWeight="Bold" Text="Elegir mensaje" Classes="menuButtonText" FontSize="14"
+											   />
+							</Button>
+
+							<Button x:Name="btnSlider"
+							   Click="btnSlider_Click"
+							  Classes="menuButton"
+									
+									Width="105"
+									Height="60"
+									Margin="8,10,12,10">
+								<TextBlock FontWeight="Bold" Text="Ajustar Velocidad" Classes="menuButtonText" FontSize="14"/>
+							</Button>
+						</StackPanel>
+
+						<Image Source="Images/leanovation.png"  Height="35" Margin="0,20,0,0"/>
+					</StackPanel>
+
+				</Border>
+
+				<!--Main Section-->
+
+				<Border
+                    Grid.Column="1"
+						Background="{DynamicResource primaryBackColor2}">
+
+					<Grid>
+						<Grid.RowDefinitions>
+							<!--Manipulate Tab-->
+							<RowDefinition Height="30"/>
+							<!--Header-->
+							<!--Content-->
+							<RowDefinition Height="*"/>
+						</Grid.RowDefinitions>
+
+
+						<StackPanel x:Name="pnlControlBar"
+                                    Grid.Row="0"
+                                    Orientation="Horizontal"
+                                    Background="{DynamicResource plainTextColor1}"
+                                    Margin="0,0,5,0"
+									>
+
+						</StackPanel>
+
+						<Label Grid.Row="0" Content="Comunicación Hitachi IJ UX-D161WP"
+                               HorizontalAlignment="Center" VerticalAlignment="Center"
+                               Foreground="{DynamicResource titleColor1}"
+                               FontSize="20"/>
+
+						<Grid Grid.Row="1">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="2*"/>
+								<ColumnDefinition Width="*"/>
+							</Grid.ColumnDefinitions>
+
+							<StackPanel Margin="5" Grid.Column="0" HorizontalAlignment="Center">
+								<Label Content="Lista de mensajes"
+																	   VerticalAlignment="Center"
+																	   HorizontalAlignment="Center"
+																	   FontSize="16"
+																	   FontWeight="DemiBold"
+																	   Foreground="{DynamicResource titleColor1}"/>
+								<Grid>
+									<DataGrid IsReadOnly="True" Focusable="False" x:Name="MyDataGrid" AutoGenerateColumns="False">
+										<DataGrid.Columns>
+											<DataGridTextColumn Header="#" Binding="{Binding Id}" />
+											<DataGridTextColumn Header="Nombre" Binding="{Binding Name}" />
+											<DataGridTextColumn Header="Contenido" Binding="{Binding Content}" />
+											<DataGridTextColumn Header="Velocidad" Binding="{Binding Speed}" />
+										</DataGrid.Columns>
+									</DataGrid>
+								</Grid>
+
+								<Label Content="Velocidad actual"
+																	   VerticalAlignment="Center"
+																	   HorizontalAlignment="Center"
+																	   FontSize="16"
+																	   FontWeight="DemiBold"
+																	   Foreground="{DynamicResource titleColor1}"/>
+								<TextBox x:Name="txtDataSpeed" Classes="dataBox"/>
+							</StackPanel>
+
+							<StackPanel Margin="5" Grid.Column="1" HorizontalAlignment="Center"
+										>
+								<Label Content="Impresora 1"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       FontSize="16"
+                                       FontWeight="DemiBold"
+                                       Foreground="{DynamicResource titleColor1}"/>
+								<Label Content="Mensaje seleccionado" Classes="menuLabel"/>
+								<TextBox x:Name="txtDataOut1" Classes="dataBox"/>
+								<Label Content="Contenido del mensaje" Classes="menuLabel"/>
+								<TextBox x:Name="msgDataOut1" Classes="dataBox"/>
+								<Label Content="Impresora 2"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       FontSize="16"
+                                       FontWeight="DemiBold"
+                                       Foreground="{DynamicResource titleColor1}"/>
+								<Label Content="Mensaje seleccionado" Classes="menuLabel"/>
+								<TextBox x:Name="txtDataOut2" Classes="dataBox"/>
+								<Label Content="Contenido del mensaje" Classes="menuLabel"/>
+								<TextBox x:Name="msgDataOut2" Classes="dataBox"/>
+
+								<Button x:Name="btnUpdate"
+							   Click="btnUpdate_Click"
+							  Classes="menuButton"
+								>
+									<StackPanel Orientation="Horizontal">
+										<fa:Icon Value="fa-solid fa-arrows-rotate" Classes="menuButtonIcon"/>
+										<TextBlock Text="  Actualizar" Classes="menuButtonText"/>
+									</StackPanel>
+								</Button>
+
+							</StackPanel>
+
+
+						</Grid>
+
+					</Grid>
+
+				</Border>
+			</Grid>
+
+		</Border>
+	</Border>
+</UserControl>

@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows10.0.17763.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Images\donaldson.png" />
+    <None Remove="Images\leanovation.png" />
+    <None Remove="Messages\Messages.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Include="Images\donaldson.png" />
+    <AvaloniaResource Include="Images\leanovation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Messages\Messages.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <TrimmerRootAssembly Include="Avalonia.Themes.Fluent" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.19" />
+    <PackageReference Include="Avalonia.Controls.DataGrid" Version="0.10.19" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.19" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.19" />
+    <PackageReference Include="Avalonia.LinuxFramebuffer" Version="0.10.19" />
+    <PackageReference Include="Avalonia.Skia" Version="0.10.19" />
+    <PackageReference Include="Iot.Device.Bindings" Version="2.2.0" />
+    <PackageReference Include="MessageBox.Avalonia" Version="2.1.0" />
+    <PackageReference Include="Projektanker.Icons.Avalonia.FontAwesome" Version="5.12.0" />
+    <PackageReference Include="System.Device.Gpio" Version="2.2.0" />
+    <PackageReference Include="XamlNameReferenceGenerator" Version="1.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="EIP">
+      <HintPath>..\..\Hitachi\HitachiEtherNetIP\Hitachi_EIP_DLL\Hitachi_EIP\bin\x64\Hitachi\EIP.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,110 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:fa="clr-namespace:Projektanker.Icons.Avalonia;assembly=Projektanker.Icons.Avalonia"
+			 x:Class="LeanovationHitachi.App">
+
+	<Application.Styles>
+		<FluentTheme Mode="Light"/>
+		<Style Selector="Button.keyPad">
+			<Setter Property="Width" Value="70"/>
+			<Setter Property="Height" Value="45"/>
+			<Setter Property="Margin" Value="4"/>
+			<Setter Property="FontSize" Value="14"/>
+			<Setter Property="Background" Value="{DynamicResource primaryBackColor2}"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		</Style>
+		<Style Selector="Label.menuLabel">
+			<Setter Property="Margin" Value="0,5,0,-2"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="Foreground" Value="{DynamicResource titleColor2}"/>
+		</Style>
+		<Style Selector="TextBox.dataBox">
+			<Setter Property="Width" Value="180"/>
+			<Setter Property="Height" Value="30"/>
+			<Setter Property="Margin" Value="4"/>
+			<Setter Property="Text" Value="-"/>
+			<Setter Property="FontSize" Value="14"/>
+			<Setter Property="Focusable" Value="False"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		</Style>
+		<Style Selector="Button.menuButton">
+			<Setter Property="Height" Value="30"/>
+			<Setter Property="Width" Value="150"/>
+			<Setter Property="Margin" Value="3"/>
+			<Setter Property="Background" Value="{DynamicResource primaryBackColor1}"/>
+			<Setter Property="Foreground" Value="{DynamicResource primaryBackColor2}"/>
+			<Setter Property="BorderBrush" Value="Transparent"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+			<Setter Property="BorderBrush" Value="{TemplateBinding Background}"/>
+
+		</Style>
+		<Style Selector="Button.menuButton:pressed">
+			<Setter Property="Margin" Value="0,0,0,5"/>
+			<Setter Property="Background" Value="{DynamicResource panelColor}"/>
+			<Setter Property="Foreground" Value="{DynamicResource titleColor1}"/>
+			<Setter Property="BorderBrush" Value="{Binding Path=Tag, RelativeSource={RelativeSource Self}}"/>
+		</Style>
+		<Style Selector="TextBlock.menuButtonText">
+			<Setter Property="Foreground" Value="{Binding Path=Foreground,RelativeSource={RelativeSource AncestorType=Button}}"/>
+			<Setter Property="FontFamily" Value="Montserrat"/>
+			<Setter Property="FontWeight" Value="Medium"/>
+			<Setter Property="TextAlignment" Value="Center"/>
+			<Setter Property="FontSize" Value="11"/>
+			<Setter Property="TextWrapping" Value="Wrap"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+		</Style>
+		<StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/>
+		<StyleInclude Source="avares://Avalonia.Themes.Default/Accents/BaseLight.xaml"/>
+		<StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Default.xaml"/>
+
+		<Style Selector="DataGrid">
+			<Setter Property="AlternatingRowBackground" Value="{DynamicResource windowBorderColor3}"/>
+			<Setter Property="RowBackground" Value="{DynamicResource windowBorderColor2}"/>
+		</Style>
+
+
+
+
+
+	</Application.Styles>
+
+
+	<Application.Resources>
+		<!--#094074-->
+		<Color x:Key="primaryBackColor1">#F58634</Color>
+		<!--153B5F-->
+		<Color x:Key="primaryBackColor2">#4B4B4D</Color>
+		<!--DCEFF3-->
+		<Color x:Key="secondaryBackColor1">#FFEADB</Color>
+		<!--CAF5FF-->
+		<!--<Color x:Key="secondaryBackColor2"></Color>-->
+
+		<Color x:Key="windowBorderColor1">#A6D8E6</Color>
+		<!--A6D8E6-->
+		<Color x:Key="windowBorderColor2">#FFEADB</Color>
+		<!--FFEADB-->
+		<Color x:Key="windowBorderColor3">#FAFAFA</Color>
+
+		<SolidColorBrush x:Key="color1" Color="#0D1E7F"/>
+		<SolidColorBrush x:Key="color2" Color="#0D8070"/>
+		<SolidColorBrush x:Key="color3" Color="#C3423F"/>
+		<SolidColorBrush x:Key="color4" Color="#9BC53D"/>
+		<SolidColorBrush x:Key="color5" Color="#5AAA95"/>
+		<!--FFFFFC-->
+		<SolidColorBrush x:Key="titleColor1" Color="#FFFFFC"/>
+		<!--C7CEDB-->
+		<SolidColorBrush x:Key="titleColor2" Color="#C7CEDB"/>
+		<!--e2e2e2-->
+		<SolidColorBrush x:Key="plainTextColor1" Color="#874415"/>
+		<!--A6A6A7-->
+		<SolidColorBrush x:Key="plainTextColor2" Color="#A6A6A7"/>
+
+		<SolidColorBrush x:Key="panelColor" Color="#FFEADB"/>
+		<SolidColorBrush x:Key="panelOverColor" Color="#C25D14"/>
+	</Application.Resources>
+</Application>
